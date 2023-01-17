@@ -1,0 +1,240 @@
+.onboard{
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.app-logo{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.onboard-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 460px;
+    max-height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background: var(--app-white);
+    box-shadow: 4px 4px 20px rgba(157, 157, 157, 0.12);
+    border-radius: 15px;
+    z-index: 10000;
+}
+
+.onboard-logo-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.onboard-content{
+    width: 100%;
+}
+
+.onboard-title{
+    margin-top: 24px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 500;
+}
+
+.onboard-description{
+    margin-top: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: var(--app-gray);
+}
+
+.onboard-form-block{
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.onboard-footer{
+    position: absolute;
+    width: 100vw;
+    bottom: 25px;
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 21px;
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 8px;
+    color: var(--app-gray);
+}
+
+.form-input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 11px 14px;
+    width: 360px;
+    border: 1px solid var(--app-graded-border);
+    border-radius: 6px;
+    color: var(--app-black);
+    outline: none;
+}
+
+.form-input:focus{
+    border: 1px solid var(--app-blue);
+}
+
+.form-radio-container{
+    width: 360px;
+}
+
+.form-radio-container input{
+    width: auto;
+	height: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 4px 8px;
+	background: #F0F0F0;
+	color: var(--app-gray);
+	font-size: 14px;
+    font-family: "Inter",sans-serif;
+    font-weight: 500;
+	transition: all 100ms linear;
+    margin-right: 13px;
+}
+
+.form-radio-container input:checked {
+	background: var(--app-blue);
+	color: var(--app-white);
+	box-shadow: 0 1px 1px #0000002e;
+}
+
+.form-radio-container input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.form-button{
+    background: var(--app-blue);
+    border: 1px solid var(--app-blue);
+    color: var(--app-white);
+    padding: 10px 40px;
+    margin-top: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-button:hover{
+    background-color: var(--app-dark-blue);
+}
+
+.container{
+    position: relative;
+}
+
+.select{
+    position: relative;
+    width: 360px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--app-graded-border);
+    text-transform: capitalize;
+	background: var(--app-white);
+	color: var(--app-gray);
+    text-align: left;
+    padding: 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.select::after{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid var(--app-black);
+    border-bottom: 2px solid var(--app-black);
+}
+
+.options{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+	background: #f7f7f7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.options .item{
+    color: var(--app-gray);
+    text-transform: capitalize;
+    width: 100%;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+
+.select:hover{
+    background: #F0F0F0;
+}
+
+.select.active{
+	background: var(--app-white);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.options.active{
+    display: block;
+}
+
+.options .item.active{
+	background: var(--app-blue);
+	color: var(--app-white);
+}
+
+@media only screen and (max-width: 450px) {
+    body, #root{
+        overflow: hidden;
+    }
+
+    .onboard-card{
+        max-height: 100%;
+    }
+    .form-input{
+        width: 325px;
+    }
+    .select{
+        width: 325px;
+    }
+    .form-radio-container{
+        width: 325px;
+    }
+    
+    .form-radio-container input{
+        margin-bottom: 13px;
+    }
+    
+  }

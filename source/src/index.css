@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;500&display=swap');
+
+:root{
+  --app-white: #FFFFFF;
+  --app-black: #000000;
+  --app-graded-white: #F9F9F9;
+  --app-graded-border: #CED4DA; 
+  --app-gray: #545454;
+  --app-blue: #3766e8;
+  --app-dark-blue: #315acc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+body, #root{
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter",sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  background-image: url("app_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
